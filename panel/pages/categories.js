@@ -3,11 +3,11 @@ import Layout from '../components/Layout'
 import Title from '../components/Title'
 import Card from '../components/Card'
 
-const Index = () => {
+const Categories = () => {
   return (
     <div>
       <Layout>
-        <Title>DevShop - Painel de Controle</Title>
+        <Title>DevShop - Categorias</Title>
 
         <div className='mt-4'>
           <div className='flex flex-wrap -mx-6'>
@@ -532,4 +532,4 @@ const Index = () => {
   )
 }
 
-export default Index
+export default Categories
