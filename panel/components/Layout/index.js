@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
 import Menu from '../Menu'
+import { MdLabel, MdHome } from 'react-icons/md'
 
 const Layout = ({ children }) => {
   const [sidebarOpen, setSidebarOpen] = useState(false)
@@ -31,10 +32,12 @@ const Layout = ({ children }) => {
       >
         <Menu.Brand>DevShop</Menu.Brand>
         <Menu.Nav>
-          <Menu.NavItem href='/'>Home</Menu.NavItem>
-          <Menu.NavItem href='/categories'>Categories</Menu.NavItem>
-          <Menu.NavItem href='/products'>Products</Menu.NavItem>
-          <Menu.NavItem href='/brands'>Brands</Menu.NavItem>
+          <Menu.NavItem href='/' Icon={MdHome}>
+            Home
+          </Menu.NavItem>
+          <Menu.NavItem href='/categories' Icon={MdLabel}>
+            Categories
+          </Menu.NavItem>
         </Menu.Nav>
       </div>
       <div className='flex-1 flex flex-col overflow-hidden'>
