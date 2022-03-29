@@ -2,8 +2,23 @@ import React from 'react'
 import Layout from '../components/Layout'
 import Title from '../components/Title'
 import Card from '../components/Card'
+import { useQuery } from '../lib/graphql'
+
+const query = {
+  query: `
+    query{
+      getAllCategories{
+        id
+        name
+        slug
+      }
+    }
+  `
+}
 
 const Categories = () => {
+  const { data, error } = useQuery(query)
+  console.log('[cat-swr]', data, error)
   return (
     <div>
       <Layout>
