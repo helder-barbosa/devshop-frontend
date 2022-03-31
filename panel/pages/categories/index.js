@@ -1,10 +1,9 @@
 import React from 'react'
-import Layout from '../components/Layout'
-import Title from '../components/Title'
-import Card from '../components/Card'
-import { useQuery } from '../lib/graphql'
-import Table from '../components/Table'
-import { HiOutlineShoppingBag } from 'react-icons/hi'
+import Layout from '../../components/Layout'
+import Title from '../../components/Title'
+import { useQuery } from '../../lib/graphql'
+import Table from '../../components/Table'
+import Link from 'next/link'
 
 const query = {
   query: `
@@ -25,9 +24,11 @@ const Categories = () => {
       <Layout>
         <div className=' my-2 flex justify-between'>
           <Title>DevShop - Categories</Title>
-          <a className=' p-3 bg-indigo-800 text-white rounded-lg hover:bg-indigo-500'>
-            Create Categories
-          </a>
+          <Link href='/categories/create'>
+            <a className=' p-3 bg-indigo-800 text-white rounded-lg hover:bg-indigo-500'>
+              Create Category
+            </a>
+          </Link>
         </div>
         <div className='flex flex-col mt-8'>
           <div className='-my-2 py-2 overflow-x-auto sm:-mx-6 sm:px-6 lg:-mx-8 lg:px-8'>
