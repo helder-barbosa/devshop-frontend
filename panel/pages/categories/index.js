@@ -5,8 +5,7 @@ import { useQuery } from '../../lib/graphql'
 import Table from '../../components/Table'
 import Link from 'next/link'
 
-const query = {
-  query: `
+const GET_ALL_CATEGORIES = `
     query{
       getAllCategories{
         id
@@ -15,10 +14,9 @@ const query = {
       }
     }
   `
-}
 
 const Categories = () => {
-  const { data, error } = useQuery(query)
+  const { data, error } = useQuery(GET_ALL_CATEGORIES)
   return (
     <div>
       <Layout>
