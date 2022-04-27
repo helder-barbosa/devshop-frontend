@@ -93,17 +93,14 @@ const Categories = () => {
                             </Table.Td>
 
                             <Table.Td>
-                              <a
-                                href='#'
-                                className='text-indigo-600 hover:text-indigo-900'
-                              >
-                                Edit
-                              </a>
-                              {' - '}
+                              <Link href={`/categories/${item.id}/edit`}>
+                                <a className='p-2 pl-2 pr-2 ml-1 bg-yellow-500 text-gray-100 text-base rounded-lg focus:border-4 border-yellow-300'>
+                                  Edit
+                                </a>
+                              </Link>
                               <a
                                 onClick={remove(item.id)}
-                                href='#'
-                                className='text-indigo-600 hover:text-indigo-900'
+                                className='p-2 pl-2 pr-2 ml-1 bg-red-500 text-gray-100 text-base rounded-lg focus:border-4 border-red-300'
                               >
                                 Remove
                               </a>
